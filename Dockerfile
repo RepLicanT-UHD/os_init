@@ -12,7 +12,6 @@ RUN apt update; \
     cd /usr/local/bin;
     
 FROM nvidia/cuda:9.0-base-ubuntu16.04
-COPY --from=build / /
 
 WORKDIR /usr/local/bin
 
