@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.4.2-base-ubuntu20.04
+FROM nvidia/nvcr.io/nvidia/tensorflow:22.01-tf1-py3
 
 LABEL maintainer="Roman Nikov"
 
